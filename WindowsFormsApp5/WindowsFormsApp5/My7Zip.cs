@@ -8,6 +8,9 @@ using SevenZip;
 
 namespace WindowsFormsApp5
 {
+    /// <summary>
+    /// test
+    /// </summary>
     class My7Zip
     {
         public static void CompressFileLZMA(string inFile, string outFile)

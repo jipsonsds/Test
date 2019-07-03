@@ -26,3 +26,17 @@ C:\Users\jipson\Desktop\7Z\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFo
 C:\Users\jipson\Desktop\7Z\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CopyComplete
 C:\Users\jipson\Desktop\7Z\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
 C:\Users\jipson\Desktop\7Z\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\SevenZip.dll
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\SevenZipSharp.dll
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\SevenZip.xml
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csprojAssemblyReference.cache
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form1.resources
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.cache
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CoreCompileInputs.cache
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.CopyComplete
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\jipson\Documents\GitHub\Test\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
