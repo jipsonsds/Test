@@ -38,14 +38,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtinput = new System.Windows.Forms.TextBox();
-            this.txtEncrypt = new System.Windows.Forms.TextBox();
             this.txtDecrypt = new System.Windows.Forms.TextBox();
+            this.txtEncrypt = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtinput = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txtnormalFile = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFileName
@@ -137,7 +141,6 @@
             this.groupBox3.Controls.Add(this.txtDecrypt);
             this.groupBox3.Controls.Add(this.txtEncrypt);
             this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.txtinput);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 168);
@@ -146,6 +149,20 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Encryption (AES256)";
+            // 
+            // txtDecrypt
+            // 
+            this.txtDecrypt.Location = new System.Drawing.Point(50, 76);
+            this.txtDecrypt.Name = "txtDecrypt";
+            this.txtDecrypt.Size = new System.Drawing.Size(358, 20);
+            this.txtDecrypt.TabIndex = 4;
+            // 
+            // txtEncrypt
+            // 
+            this.txtEncrypt.Location = new System.Drawing.Point(50, 43);
+            this.txtEncrypt.Name = "txtEncrypt";
+            this.txtEncrypt.Size = new System.Drawing.Size(358, 20);
+            this.txtEncrypt.TabIndex = 3;
             // 
             // button3
             // 
@@ -157,16 +174,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(414, 14);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 25);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Encrypt";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // txtinput
             // 
             this.txtinput.Location = new System.Drawing.Point(50, 17);
@@ -174,25 +181,52 @@
             this.txtinput.Size = new System.Drawing.Size(358, 20);
             this.txtinput.TabIndex = 0;
             // 
-            // txtEncrypt
+            // groupBox4
             // 
-            this.txtEncrypt.Location = new System.Drawing.Point(50, 43);
-            this.txtEncrypt.Name = "txtEncrypt";
-            this.txtEncrypt.Size = new System.Drawing.Size(358, 20);
-            this.txtEncrypt.TabIndex = 3;
+            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.txtnormalFile);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Location = new System.Drawing.Point(0, 308);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(546, 150);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Encryption (AES256)";
             // 
-            // txtDecrypt
+            // button5
             // 
-            this.txtDecrypt.Location = new System.Drawing.Point(50, 76);
-            this.txtDecrypt.Name = "txtDecrypt";
-            this.txtDecrypt.Size = new System.Drawing.Size(358, 20);
-            this.txtDecrypt.TabIndex = 4;
+            this.button5.Location = new System.Drawing.Point(414, 43);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(98, 25);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Decrypt File";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(414, 14);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 25);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Browse";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // txtnormalFile
+            // 
+            this.txtnormalFile.Location = new System.Drawing.Point(50, 17);
+            this.txtnormalFile.Name = "txtnormalFile";
+            this.txtnormalFile.Size = new System.Drawing.Size(358, 20);
+            this.txtnormalFile.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 377);
+            this.ClientSize = new System.Drawing.Size(546, 507);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -204,6 +238,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -221,10 +257,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtinput;
         private System.Windows.Forms.TextBox txtDecrypt;
         private System.Windows.Forms.TextBox txtEncrypt;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtnormalFile;
     }
 }
 

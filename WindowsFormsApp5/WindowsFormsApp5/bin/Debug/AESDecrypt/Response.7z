@@ -1,0 +1,15 @@
+Readme.txt
+
+The DAR-717.dat file is the original DAR file
+The DAR_FWWGA12_20190625_072451_80_CU_DAR-717.dat is the file that has been compressed by Fomax (LZMA2 compression with LZMA_CHECK_CRC64)
+The DAR_FWWGA12_20190625_075042_81_CC_DAR-717.dat is the file that has been compressed and encrypted by Fomax (LZMA2 compression with LZMA_CHECK_CRC64)
+The encryption is done with the AES256-CBC algorithm with the following attribute
+
+SaltIterationCount = 20000;
+SaltLength = 16;
+Salt[NfmsPackager::kSaltLength] = {0xd3, 0x31, 0x29, 0x4a, 0xae, 0x3d, 0xe5, 0xc5, 0xdf, 0x64, 0xd0, 0xf2, 0xa4, 0x97, 0xa2, 0x15};
+InitializationVectorLength = 16;  //128 bits long key
+Password = "helloword";
+Algorithm : PKCS5_PBKDF2_HMAC_SHA1
+
+

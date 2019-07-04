@@ -17,10 +17,11 @@ namespace WindowsFormsApp5
     {
         string _CopyPath = Application.StartupPath + "\\7ZipCopy";
         string _CopyPathAES = Application.StartupPath + "\\AESCopy";
+        string _CopyPathAESencrypt = Application.StartupPath + "\\AESCopyEncrypt";
         public Form1()
         {
             InitializeComponent();
-            My7Zip.Test();
+            //My7Zip.Test();
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -78,7 +79,21 @@ namespace WindowsFormsApp5
                 File.Copy(ofd7Zip.FileName, _CopyPathAES + @"\\" + ofd7Zip.SafeFileName, true);
                 //SevenZip.Compression.LZMA.Decoder decoder = new SevenZip.Compression.LZMA.Decoder();
                 //decoder.
+                MyAES myAES = new MyAES();
+                string password = "helloword";
 
+                // Create sha256 hash
+                //PKCS5_PBKDF2_HMAC_SHA1
+                //HMACSHA1 hMACSHA1 = new HMACSHA1();
+                SHA256 mySHA256 = SHA256Managed.Create();
+                key = mySHA256.ComputeHash(Encoding.ASCII.GetBytes(password));
+
+                // Create secret IV
+                byte[] iv = new byte[16] { 0xd3, 0x31, 0x29, 0x4a, 0xae, 0x3d, 0xe5, 0xc5, 0xdf, 0x64, 0xd0, 0xf2, 0xa4, 0x97, 0xa2, 0x15 };
+
+                //string encrypted = myAES.EncryptString(message, key, iv);
+                encrypted = myAES.FileToByteArray(_CopyPathAES + @"\\" + ofd7Zip.SafeFileName);
+                string decrypted = myAES.DecryptString(encrypted, key, iv);
             }
         }
 
@@ -116,6 +131,56 @@ namespace WindowsFormsApp5
             string roundtrip = myAES.DecryptStringFromBytes_Aes(encrypted, key);
             txtDecrypt.Text = roundtrip;
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.ofd7Zip.Multiselect = false;
+            if (!Directory.Exists(_CopyPathAESencrypt))
+            {
+                Directory.CreateDirectory(_CopyPathAESencrypt);
+            }
+            if (ofd7Zip.ShowDialog() == DialogResult.OK)
+            {
+                txtnormalFile.Text = ofd7Zip.FileName;
+                File.Copy(ofd7Zip.FileName, _CopyPathAESencrypt + @"\\" + ofd7Zip.SafeFileName, true);
+                //SevenZip.Compression.LZMA.Decoder decoder = new SevenZip.Compression.LZMA.Decoder();
+                //decoder.
+                MyAES myAES = new MyAES();
+                string password = "helloword";
+
+                // Create sha256 hash
+                //PKCS5_PBKDF2_HMAC_SHA1
+                //HMACSHA1 hMACSHA1 = new HMACSHA1();
+                SHA256 mySHA256 = SHA256Managed.Create();
+                key = mySHA256.ComputeHash(Encoding.ASCII.GetBytes(password));
+
+                // Create secret IV
+                byte[] iv = new byte[16] { 0xd3, 0x31, 0x29, 0x4a, 0xae, 0x3d, 0xe5, 0xc5, 0xdf, 0x64, 0xd0, 0xf2, 0xa4, 0x97, 0xa2, 0x15 };
+
+                //string encrypted = myAES.EncryptString(message, key, iv);
+                encrypted = myAES.FileToByteArray(_CopyPathAESencrypt + @"\\" + ofd7Zip.SafeFileName);
+                string decrypted = myAES.EncryptString(encrypted, key, iv);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MyAES myAES = new MyAES();
+            string password = "helloword";
+
+            // Create sha256 hash
+            //PKCS5_PBKDF2_HMAC_SHA1
+            //HMACSHA1 hMACSHA1 = new HMACSHA1();
+            SHA256 mySHA256 = SHA256Managed.Create();
+            key = mySHA256.ComputeHash(Encoding.ASCII.GetBytes(password));
+
+            // Create secret IV
+            byte[] iv = new byte[16] { 0xd3, 0x31, 0x29, 0x4a, 0xae, 0x3d, 0xe5, 0xc5, 0xdf, 0x64, 0xd0, 0xf2, 0xa4, 0x97, 0xa2, 0x15 };
+
+            //string encrypted = myAES.EncryptString(message, key, iv);
+            encrypted = myAES.FileToByteArray(_CopyPathAESencrypt + @"\\" + ofd7Zip.SafeFileName);
+            string decrypted = myAES.DecryptString(encrypted, key, iv);
         }
     }
 }
